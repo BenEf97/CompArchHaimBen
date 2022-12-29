@@ -7,12 +7,15 @@
 #Note: need to enable direct access in MARS in order to work. To do that follow the instructions below:
 #Open MARS->Click on 'Settings' tab->Check on "Assemble all files in directory".
 .data 
-.globl Data_Block #access from directory folder
+.globl Data_Block #Enable access from directory folder.
 
 .text
 Data_Block:
+#initial function commands:
 addi $sp,$sp,-4
 sw $s0, 0($sp)
+
+#start of funciton:
 add $t0,$a0,$0 #$t0=$a0, means that $t0 has the start of the block address
 add $t1,$a1,$0 #$t1=$a1, means that $t1 has the number of words.
 L1:
@@ -25,7 +28,7 @@ sw $a0,0($t0) #$t0=$a0, store the random number in the array
 addi $t0,$t0,4 #$t0+=4, go to next index in the array.
 addi $t1,$t1,-1 #$t1-=1
 j L1 #jump to L1 label
-END_DataBlock:
+END_DataBlock: #end of function
 lw $s0, 0($sp)
 addi $sp, $sp, 4
 jr $ra #return to main
