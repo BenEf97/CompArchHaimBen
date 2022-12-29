@@ -22,4 +22,4 @@ addi $t0,$t0,-1 #$t0-=1
 j L1 #jump to L1 label
 END:
 la $t0,Array #load the desired address to $t0, save it later if needed
-jr $ra
+jr $ra #return to main
