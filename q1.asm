@@ -1,6 +1,6 @@
 #Q1
 #Store random numbers in range of [-50,50] in an array.
-.data 0x10010000
+.data 0x10010000 #block address
 Array: .space 80 # init Array[80 bytes]==Array[20 words].
 .text
 li $t0,20 #$t0=20
