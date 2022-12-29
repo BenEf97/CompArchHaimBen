@@ -1,13 +1,18 @@
 #Q2
 #Store random numbers in range of [-50,50] in an array. Now as a function
-#to do- check the conditions and check it works.
-#Note: need to enable direct access in MARS in order to work.
+#The function gets the following arguments:
+#$a0=Start of Block Address
+#$a1=Number of words
+#The caller needs to assign space
+#Note: need to enable direct access in MARS in order to work. To do that follow the instructions below:
+#Open MARS->Click on 'Settings' tab->Check on "Assemble all files in directory".
 .data 0x10010000
 Array: .space 80 # init Array[80 bytes]==Array[20 words].
 .globl Data_Block #access from directory folder
 
 .text
 Data_Block:
+#Check for arguments, if they are all zero then continue normally.
 li $t0,20 #$t0=20
 la $t1,Array #load address of Array to $t1.
 L1:
