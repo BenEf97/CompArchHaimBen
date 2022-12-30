@@ -4,7 +4,7 @@
 #$a0=Start of Block Address
 #$a1=Number of words
 #The caller needs to assign space
-.data 
+.data 0x10010000
 
 .text
 Data_Block:
