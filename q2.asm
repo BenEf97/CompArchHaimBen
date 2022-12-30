@@ -4,10 +4,7 @@
 #$a0=Start of Block Address
 #$a1=Number of words
 #The caller needs to assign space
-#Note: need to enable direct access in MARS in order to work. To do that follow the instructions below:
-#Open MARS->Click on 'Settings' tab->Check on "Assemble all files in directory".
 .data 
-.globl Data_Block #Enable access from directory folder.
 
 .text
 Data_Block:
