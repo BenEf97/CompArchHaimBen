@@ -1,4 +1,4 @@
-#q3 copy 20 words 
+#q3 copy 20 words from one data block to another
 .data 0x10010000
 Array: .space 80 #init Array[80 bytes]==Array[20 words]
 .text
